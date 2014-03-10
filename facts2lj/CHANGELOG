@@ -1,0 +1,9 @@
+Directory structure:
+/facts                  Base directory of original install
+/facts/bash             facts2lj shell scripts
+/facts/work             Working directory for script output
+/facts/tmp              Temp directory (also used by FACTS)
+
+========== CHANGELOG ==========
+2014-03-03  Initial git repo started
+========== CHANGELOG ==========

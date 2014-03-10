@@ -1,0 +1,10 @@
+
+DATE: 12/04/13                                              ABLETRONICS                                              ARR210 PAGE: 1
+USER: CP  T41                                   CASH RECEIPTS & ADJ REGISTER #0857                                   TIME:  8:52 AM
+
+DEPOSIT DATE 12/04/13, #0852
+BANK 01 BANK OF AMERICA
+
+          DATE             ORIGINAL   ENTRY     CURRENT    DUE   ------DISCOUNT-----                                  AJ        NEW
+ CHECK  APPLIED DOCUMENT     AMOUNT   DATE       AMOUNT   DATE       AMOUNT   DATE      PAYMENT   DISCOUNT ADJUSTMENT CD    BALANCE
+===================================================================================================================================

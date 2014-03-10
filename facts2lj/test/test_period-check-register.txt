@@ -1,0 +1,8 @@
+
+DATE: 01/30/14                            ABLETRONICS                             APR810 PAGE: 1
+USER: CP  T41                     PERIOD CHECK REGISTER 12/13                     TIME:  8:18 AM
+
+BANK FIRST TO LAST
+                                                 ----CHECK----   DISCOUNT       CHECK
+ CHECK     VENDOR NAME                             DATE   REG#     AMOUNT      AMOUNT   TYPE
+================================================================================================

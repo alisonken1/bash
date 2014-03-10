@@ -1,0 +1,10 @@
+
+DATE: 02/26/14                                              ABLETRONICS                                               APR310 PAGE: 1
+USER: CP  T41                                         AP CHECK REGISTER #1173                                         TIME:  2:43 PM
+
+REGISTER DATE: 02/26/14
+BANK 01 BANK OF AMERICA
+PERIOD 02/14 FEB
+                                                                         ----DATE---              DISCOUNT
+ CHECK   DATE         AMOUNT                                    DOCUMENT ENTRY  DUE     PAYMENT              TAKEN     MEMO
+====================================================================================================================================

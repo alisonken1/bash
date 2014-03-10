@@ -1,0 +1,58 @@
+                                           PURCHASE ORDER
+                                            ABLETRONICS                              NO. 023269
+                                          9860 6th Street
+                                        Cucamonga, Ca 91730                              Page 1
+                                        Phone (909) 987-7606
+                                          Fax 909-945-9449                              02/07/14
+
+
+           VENDOR:       PANP                               SHIP-TO: 01
+           PAN PACIFIC ENTERPRISES CO.   714-540-4021       ABLETRONICS
+           1680 TORONTO WAY                                 9860 6th STREET
+           COSTA MESA , CA 92626         FAX 800-446-1192
+                                                            CUCAMONGA, CA. 91730
+================================================================================================
+ BUYER|TERMS          |SHIP VIA       |FOB            |FREIGHT|REF#           |EXPECTED|CUSTOMER
+ ----------------------------------------------------------------------------------------------
+   RI |NET 30 DAYS    |UPS            |COSTA MESA     |PREPAID|               |02/10/14|
+================================================================================================
+ VENDOR-ITEM #        ITEM |DESCRIPTION                       |    UNITS|UM|     COST|UM| EXTEND
+================================================================================================
+UHF-7613HN           |14862|UHF M-F R/A UG644/U               |        6|EA|    2.680|EA|  16.08
+BNC-7194             |7013 |UG-1094A/U BNC F-CHS              |       25|EA|     .810|EA|  20.25
+AD-DVIM-DFPOF        |32553|DVI DIGITAL PLUG/DFP RECPT ADP    |        4|EA|    7.220|EA|  28.88
+ADL-USB-2PS2Y        |46104|USB TO (2)PS/2 PORT ADAPTER       |        1|EA|    8.180|EA|   8.18
+ADL-USB-D9MS         |32535|USB/DB9M SERIAL CONVERTER         |        1|EA|   12.950|EA|  12.95
+DP-9C                |7089 |HOOD 9PIN PLASTIC                 |       50|EA|     .200|EA|  10.00
+DP-9C/S              |19590|HOOD 9PIN PLASTIC NYLON SR        |       50|EA|     .620|EA|  31.00
+DP-SPT-09C           |32577|HOOD DB9 PLASTIC W/THUMBSCREWS    |       50|EA|     .490|EA|  24.50
+DS-9S                |7072 |DB9-F SOLDER DSUB CONNECTOR       |       50|EA|     .240|EA|  12.00
+F28-A26G             |27311|26COND GREY RIBBON CABLE          |        1|C'|   36.920|C'|  36.92
+F28-A50G             |13127|50COND GREY RIBBON CABLE          |        1|C'|   71.000|C'|  71.00
+FHI-A16              |46500|FUSEHOLDER INLINE ATC 16AWG       |       10|EA|     .620|EA|   6.20
+IDM-26               |24743|26PIN IDC M/HEADER                |       20|EA|    1.540|EA|  30.80
+PT-066               |11627|RJ12 6C FLAT MOD CONNECTOR        |     3000|EA|     .043|EA| 129.00
+PT-J951-66           |32360|PCB MT MOD JK SIDE/LO PRO 6p6c    |       10|EA|     .400|EA|   4.00
+S-H15MM-03'XL        |32340|VGA EXT M/M 3' DOUBLE SHLD        |        4|EA|    6.800|EA|  27.20
+S-H15MM-25'-XA       |46133|VGA SHLD 15PIN M/M 25'            |        2|EA|   15.800|EA|  31.60
+S-H15MM-25'-XL       |32327|VGA EXT M/M 25' DOUBLE SHLD       |        1|EA|   21.800|EA|  21.80
+S-H15MM-50'-XA       |46135|VGA SHLD 15PIN M/M 50'            |        1|EA|   24.800|EA|  24.80
+S-H15MM-75'XA        |46136|VGA SHLD 15PIN M/M 75'            |        1|EA|   56.680|EA|  56.68
+S-H15MM100XL         |32347|VGA EXT M/M 100' DOUBLE SHIELD    |        1|EA|   78.000|EA|  78.00
+S-H15MM3.5-25XL      |46076|VGA+3.5MM STEREO 25' M/M          |        1|EA|   26.880|EA|  26.88
+S-HDI2-5             |46077|HDMI M/M CABLE 5M (16.4')         |        2|EA|   17.500|EA|  35.00
+S-PWR/F-3'           |20770|MON/COMP PWR CORD 3'              |        6|EA|    3.200|EA|  19.20
+S66M1-50             |21290|66M 50PR 2CLIP BLOCK              |        2|EA|    9.740|EA|  19.48
+                     |     |                                  |         |  |         |  |
+                     |     |                                  |         |  |         |  |
+                     |     |                                  |         |  |         |  |
+                     |     |                                  |         |  |         |  |
+                     |     |                                  |         |  |         |  |
+                     |     |                                  |         |  |         |  |
+                     |     |                                  |         |  |         |  |
+                     |     |                                  |         |  |         |  |
+================================================================================================
+                                                       |     AMOUNT|      TAX| FREIGHT|    TOTAL
+                                                       |---------------------------------------
+                                                       |     782.40|      .00|     .00|   782.40
+PLEASE FAX ANY CORRECTIONS. TNX, RICH                  |---------------------------------------

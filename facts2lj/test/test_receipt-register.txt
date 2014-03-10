@@ -1,0 +1,9 @@
+
+DATE: 02/25/14                                              ABLETRONICS                                               POR230 PAGE: 1
+USER: KEN T61                                          RECEIPT REGISTER #2574                                         TIME: 11:27 AM
+
+WAREHOUSE 01
+DATE 02/25/14
+                                              -----------DATE----------- ----------QUANTITY-------- BY           CT
+LN# ITEM                 DESCRIPTION          REQUESTD PROMISED RECEIVED  ORDERED RECEIVED  BACKORD UM      COST UM   EXTENSION
+====================================================================================================================================

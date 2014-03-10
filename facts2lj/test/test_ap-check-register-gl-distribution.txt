@@ -1,0 +1,8 @@
+
+DATE: 02/26/14                                              ABLETRONICS                                              APR310 PAGE: 1
+USER: CP  T41                                 AP CHECK REGISTER GL DISTRIBUTION #1173                                TIME:  2:43 PM
+
+GL PERIOD 02/14 FEB
+
+G/L#    DESCRIPTION                          VENDOR NAME                   CHECK    DOCUMENT        DEBIT       CREDIT          NET
+===================================================================================================================================

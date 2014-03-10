@@ -1,0 +1,10 @@
+
+DATE: 01/16/14                                             ABLETRONICS                                              APR110 PAGE: 1
+USER: CP  T41                                  DOCUMENT ENTRY & ADJ REGISTER #1620                                  TIME: 10:20 AM
+
+PERIOD 01/14 JAN
+BRANCH 01
+                                             GL        -----------DATE-----------       GROSS  ALLOWABLE ----GL DISTRIBUTION------
+    VENDOR NAME                 DOCUMENT BR TBL    PO#   ENTRY     DUE   DISCOUNT      AMOUNT   DISCOUNT G/L#               AMOUNT
+==================================================================================================================================
+Document Entries

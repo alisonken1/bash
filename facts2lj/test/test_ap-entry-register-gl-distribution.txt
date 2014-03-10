@@ -1,0 +1,8 @@
+
+DATE: 01/16/14                                              ABLETRONICS                                              APR110 PAGE: 1
+USER: CP  T41                                 AP ENTRY REGISTER GL DISTRIBUTION #1620                                TIME: 10:20 AM
+
+GL PERIOD 01/14 JAN
+
+G/L#    DESCRIPTION                           VENDOR NAME                         DOCUMENT          DEBIT       CREDIT          NET
+===================================================================================================================================

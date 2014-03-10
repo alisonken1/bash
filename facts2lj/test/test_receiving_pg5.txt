@@ -1,0 +1,358 @@
+DATE: 10/30/13                                              ABLETRONICS                                              POR210 PAGE: 1
+USER: RGS T25                                        RECEIVING DOCUMENT PRINT                                        TIME:  4:08 PM
+
+       VENDOR-ITEM # ITEM                 DESCRIPTION                        UNITS UM    LOC SPECIAL RECEIVING INFORMATION
+===================================================================================================================================
+PO#: 023235  Whse: 01  Promised: 11/08/13  Vendor:       PHIL PHILMORE MANUFACTURING CO.
+
+10119B               16267                ALLIGATOR CLIP/BULK SC-60            100 EA
+                                          PHIL 10119B
+
+10145                33380                CROCODILE CLIP SET 30A RED/BLK         5 EA
+                                          PHIL 10145
+
+12-100               36700                PROTOBOARD/KIT 1593K                   2 EA
+                                          PHIL 12-100
+
+12-103               36702                PROTOBOARD/KIT 1593L                   2 EA
+                                          PHIL 12-103
+
+12-106               36703                PROTOBOARD/KIT 1593P                   2 EA
+                                          PHIL 12-106
+
+12-109               36704                PROTOBOARD/KIT 1590Q                   2 EA
+                                          PHIL 12-109
+
+12-118               36707                PROTOBOARD/KIT 1590B                   2 EA
+                                          PHIL 12-118
+
+12-121               36708                PROTOBOARD/KIT 1590BB                  2 EA
+                                          PHIL 12-121
+
+12-200               36710                PROTO BOX KIT 1593K                    1 EA
+                                          PHIL 12-200
+
+13-1455              33588                SLIP-ON BARR JUMPER/TB100 25PK         5 EA
+                                          PHIL 13-1455
+
+13-1455C             33589                SLIP-ON BARR JUMPER/TB100 PK/C         2 EA
+                                          PHIL 13-1455C
+
+13-1555              33598                SLIP-ON JMPR/TB200,300 25PK            5 EA
+                                          PHIL 13-1555
+
+13-1555C             33599                SLIP-ON JMPR/TB200,300 100PK           2 EA
+                                          PHIL 13-1555C
+
+267                  28849                MINI-GATOR CLIP BULK SC-30            50 EA
+                                          PHIL 267
+
+30-10062             34160                PUSH/B SPST OFF-(ON) (35-420)          6 EA
+                                          PHIL 30-10062
+
+30-10240             34366                SW 3PDT ON-OFF-ON 17A(35-140,3         2 EA
+                                          PHIL 30-10240
+
+30-10243             34741                TOGGLE 4PDT ON-OFF-ON 15A              2 EA
+                                          PHIL 30-10243
+
+30-10376             34417                TOGGLE 4PDT ON-ON 15A(35-3080)         2 EA
+                                          PHIL 30-10376
+
+30-12178             34641                TOGGLE AUTO SPST BLU LED 30A           5 EA
+                                          PHIL 30-12178
+
+30-12179             34643                TOGGLE AUTO SPST GRN LED 30A           5 EA
+                                          PHIL 30-12179
+
+30-305B              34440                SPST TOGG ON-OFF (35-3005,3040        10 EA
+                                          PHIL 30-305B
+
+30-457               34334                SW P/B SPST OFF(ON) 6A(35-3457         5 EA
+                                          PHIL 30-457
+
+30-457B              34333                SW P/B SPST OFF(ON) 6A BULK           20 EA
+                                          PHIL 30-457B
+
+DATE: 10/30/13                                              ABLETRONICS                                              POR210 PAGE: 2
+USER: RGS T25                                        RECEIVING DOCUMENT PRINT                                        TIME:  4:08 PM
+
+       VENDOR-ITEM # ITEM                 DESCRIPTION                        UNITS UM    LOC SPECIAL RECEIVING INFORMATION
+===================================================================================================================================
+PO#: 023235  Whse: 01  Promised: 11/08/13  Vendor:       PHIL PHILMORE MANUFACTURING CO.
+
+45-105G              28482                RCA JACK RED/WHT BANDS 2/PK            5 EA
+                                          PHIL 45-105G
+
+45-108G              25806                RCA JACK ISOL RED/BLK PK               5 EA
+                                          PHIL 45-108G
+
+45-109G              27071                RCA JACK PANEL MT 1EA RED/BLK          5 EA
+                                          PHIL 45-109G
+
+45-110G              27072                RCA JACK BULKHEAD FEEDTHRU RED         5 EA
+                                          PHIL 45-110G
+
+45-111G              27073                RCA JACK BULKHEAD FEEDTHRU BLK         5 EA
+                                          PHIL 45-111G
+
+45-114G              27707                BNC MALE INLINE RG59 HT 2/PK           5 EA
+                                          PHIL 45-114G
+
+45-122               28483                1/4" JACK INLINE MONO RED&BLK          5 EA
+                                          PHIL 45-122
+
+45-123G              27076                3.5MM MONO INLINE JACK 2/PK            4 EA
+                                          PHIL 45-123G
+
+45-128G              28488                RCA JACK ISO CHAS MT 2/PK              5 EA
+                                          PHIL 45-128G
+
+45-132G              27077                1/4"STEREO FONE PLUG RED/BLK           4 EA
+                                          PHIL 45-132G
+
+45-133G              27078                3.5MM STEREO PLUG 2/PK                 5 EA
+                                          PHIL 45-133G
+
+45-134G              27079                1/4"  STEREO JACK PANEL                4 EA
+                                          PHIL 45-134G
+
+45-135               28484                1/4" JACK INLINE STER RED&BLK          5 EA
+                                          PHIL 45-135
+
+45-136G              27080                3.5MM STEREO INLINE JK 2/PK            4 EA
+                                          PHIL 45-136G
+
+45-138G              28485                RCA JACK ISO CHAS MT 3/PK              5 EA
+                                          PHIL 45-138G
+
+45-142G              28486                RCA F/F BULKHEAD RED/WHT 2/PK          5 EA
+                                          PHIL 45-142G
+
+45-144G              28487                RCA PLUG DELUXE YEL BAND 2/PK          5 EA
+                                          PHIL 45-144G
+
+45-145G              28489                RCA JACK DELUXE/YEL 2/PK               5 EA
+                                          PHIL 45-145G
+
+45-148G              28490                RCA JK ISO CHAS/YEL 2/PK               5 EA
+                                          PHIL 45-148G
+
+45-162G              28491                RCA JACK BULKHEAD R/W/Y 3/PK           5 EA
+                                          PHIL 45-162G
+
+45-163G              37657                RCA BULKHEAD JACK 2PK                  5 EA
+                                          PHIL 45-163G
+
+45-164G              28492                RCA PLUG DLX RD/WH/YL 3/PK             5 EA
+                                          PHIL 45-164G
+
+45-166G              37658                RCA BULKHEAD JACK 3PK                  5 EA
+                                          PHIL 45-166G
+
+DATE: 10/30/13                                              ABLETRONICS                                              POR210 PAGE: 3
+USER: RGS T25                                        RECEIVING DOCUMENT PRINT                                        TIME:  4:08 PM
+
+       VENDOR-ITEM # ITEM                 DESCRIPTION                        UNITS UM    LOC SPECIAL RECEIVING INFORMATION
+===================================================================================================================================
+PO#: 023235  Whse: 01  Promised: 11/08/13  Vendor:       PHIL PHILMORE MANUFACTURING CO.
+
+45-204GBU            37710                RCA PLUG/MINI-COAX BLU 2PK             5 EA
+                                          PHIL 45-204GBU
+
+45-204GGR            37711                RCA PLUG/MINI-COAX GRN 2PK             5 EA
+                                          PHIL 45-204GGR
+
+45-204GRD            37712                RCA PLUG/MINI-COAX RED 2PK             5 EA
+                                          PHIL 45-204GRD
+
+45-207G              37713                RCA PLUG/MINI-COAX ASST 3PK            5 EA
+                                          PHIL 45-207G
+
+45-224GBU            37717                BNC-M/MINI-COAX BLU 2PK                5 EA
+                                          PHIL 45-224GBU
+
+45-224GGR            37718                BNC-M/MINI-COAX GRN 2PK                5 EA
+                                          PHIL 45-224GGR
+
+45-224GRD            37719                BNC-M/MINI-COAX RED 2PK                5 EA
+                                          PHIL 45-224GRD
+
+45-227G              37720                BNC-M/MINI-COAX ASST 3PK               5 EA
+                                          PHIL 45-227G
+
+45-229G              27082                BINDING POST INSUL PKG RED/BLK         5 EA
+                                          PHIL 45-229G
+
+45-230G              27083                BINDING POST/METAL PKG RED/BLK         5 EA
+                                          PHIL 45-230G
+
+45-232G              28495                BINDING POST RED/BLK 2/PK              5 EA
+                                          PHIL 45-232G
+
+45-233               37655                3.5mm STEREO FEED THRU JACK            4 EA
+                                          PHIL 45-233
+
+45-235G              27084                BANANA JACK PKG RED/BLK                5 EA
+                                          PHIL 45-235G
+
+45-236G              26800                BINDING POST DUAL                      4 EA
+                                          PHIL 45-236G
+
+45-238               27325                BANANA JACK LOW PROFILE 2PK            5 EA
+                                          PHIL 45-238
+
+45-240               27322                BANANA PLUG 10AWG 1EA RED/BLK          5 EA
+                                          PHIL 45-240
+
+45-242G              27085                BANANA PLUG LOCKING 1/PK               5 EA
+                                          PHIL 45-242G
+
+45-260               27323                DUAL BANANA PLUG BLACK                 5 EA
+                                          PHIL 45-260
+
+45-262               27324                DUAL BANANA PLUG RED                   5 EA
+                                          PHIL 45-262
+
+45-263G              27086                RCA FEMALE/"F" MALE ADPTR 2PK          5 EA
+                                          PHIL 45-263G
+
+45-266               27326                DUAL BANANA PLUG 10AWG                 5 EA
+                                          PHIL 45-266
+
+45-270               23384                RCA-F JACKS SET/3                      5 EA
+                                          PHIL 45-270
+
+45-273               29735                RCA COM-V JACKS RD/BL/GN 3PK           5 EA
+                                          PHIL 45-273
+
+DATE: 10/30/13                                              ABLETRONICS                                              POR210 PAGE: 4
+USER: RGS T25                                        RECEIVING DOCUMENT PRINT                                        TIME:  4:08 PM
+
+       VENDOR-ITEM # ITEM                 DESCRIPTION                        UNITS UM    LOC SPECIAL RECEIVING INFORMATION
+===================================================================================================================================
+PO#: 023235  Whse: 01  Promised: 11/08/13  Vendor:       PHIL PHILMORE MANUFACTURING CO.
+
+45-276               29736                RCA JACKS WH/RD/YL/BL/GN/BL 6P         5 EA
+                                          PHIL 45-276
+
+45-301G              37721                RCA-F/"F" FEED-THRU R-G-B 3PK          5 EA
+                                          PHIL 45-301G
+
+45-302G              27089                1/4"PLUG TO 3.5MM JACK -MONO-          5 EA
+                                          PHIL 45-302G
+
+45-303G              27090                1/4"MALE TO RCA JACK ADPTR             5 EA
+                                          PHIL 45-303G
+
+45-304G              27091                3.5MM PLUG/RCA JACK ADPTR              5 EA
+                                          PHIL 45-304G
+
+45-306G              37722                RCA-F/"F" FEED-THRU R/W/Y 3PK          4 EA
+                                          PHIL 45-306G
+
+45-307G              27093                RCA-F/"F"-F ADPTR 1EA RED/BLK          5 EA
+                                          PHIL 45-307G
+
+45-308G              27094                "F"-F/RCA-M ADAPTER 2/PKG              4 EA
+                                          PHIL 45-308G
+
+45-309G              27095                "F"-"F" COUPLER  2/PK                  5 EA
+                                          PHIL 45-309G
+
+45-310G              27096                RCA MALE/MALE ADPTR 1EA RED/BL         5 EA
+                                          PHIL 45-310G
+
+45-311G              27097                RCA F/F BARRELL ALL GOLD               5 EA
+                                          PHIL 45-311G
+
+45-313G              27099                RCA R/A M/F ADPTR ALL GOLD             5 EA
+                                          PHIL 45-313G
+
+45-314G              27100                RCA PLUG/2-RCA JACKS                   5 EA
+                                          PHIL 45-314G
+
+45-315G              27101                RCA PLUG/2-RCA JACK R/A ADPTR          4 EA
+                                          PHIL 45-315G
+
+45-316G              26801                RCA M/F R/ANGLE ADPTR 2PK              5 EA
+                                          PHIL 45-316G
+
+45-320G              27102                3.5MM STEREO PLUG TO 1/4" JACK         5 EA
+                                          PHIL 45-320G
+
+45-323G              28498                1/4"-M/RCA-F R/A ADPTR GOLD            5 EA
+                                          PHIL 45-323G
+
+45-324G              28499                3.5mm/RCA-F R/A ADPTR GOLD             4 EA
+                                          PHIL 45-324G
+
+45-333G              28501                RCA BARREL TRIPLE FOR A/V              5 EA
+                                          PHIL 45-333G
+
+45-478               28502                SVHS BULKHEAD CONN SOLDERLESS          4 EA
+                                          PHIL 45-478
+
+45-690G              27103                A3F STYLE MICROPHONE PLUG              4 EA
+                                          PHIL 45-690G
+
+45-800G              27107                Y-ADPTR DBL 2RCA-F/4RCA-M              5 EA
+                                          PHIL 45-800G
+
+45-801G              27108                Y-ADPTR DBL 2RCA-M/4RCA-F              5 EA
+                                          PHIL 45-801G
+
+DATE: 10/30/13                                              ABLETRONICS                                              POR210 PAGE: 5
+USER: RGS T25                                        RECEIVING DOCUMENT PRINT                                        TIME:  4:08 PM
+
+       VENDOR-ITEM # ITEM                 DESCRIPTION                        UNITS UM    LOC SPECIAL RECEIVING INFORMATION
+===================================================================================================================================
+PO#: 023235  Whse: 01  Promised: 11/08/13  Vendor:       PHIL PHILMORE MANUFACTURING CO.
+
+45-810G              27109                SPADE LUGS 10AWG PKG RED/BLK           5 EA
+                                          PHIL 45-810G
+
+45-814G              25804                PIN PLUG 10AWG 2PK                     5 EA
+                                          PHIL 45-814G
+
+45-816G              27110                RING TERMINALS 10AWG                   4 EA
+                                          PHIL 45-816G
+
+45-832G              27115                SPADETERM 12-10AWG COLOR CODED         4 EA
+                                          PHIL 45-832G
+
+50-63371             34006                TIP CLEANER/DELTA                     20 EA
+                                          PHIL 50-63371
+
+502P                 4260                 3.5mm STEREO PLUG PLASTIC MLD          8 EA
+                                          PHIL 502P
+
+504K                 4254                 3.5mm STEREO JACK PANEL(502K)          8 EA
+                                          PHIL 504K
+
+65-2525C             33792                SPADE #8 22-16 RED VINYL 100PK         2 EA
+                                          PHIL 65-2525C
+
+65-2543C             33798                SPADE #4 16-14 BLU VINYL C/PK          2 EA
+                                          PHIL 65-2543C
+
+65-2545C             33802                SPADE #8 16-14 BLU VINYL 100PK         5 EA
+                                          PHIL 65-2545C
+
+65-4342              33841                Q.D.187-F 16-14 FI VINYL 10PK          6 EA
+                                          PHIL 65-4342
+
+CA70                 50073                Y-ADPT STEREO 3.5mm-M/2-RCA-F         20 EA
+                                          PHIL CA70
+
+S4140                13354                SOLDERING IRON 40W CERAMIC             6 EA
+                                          PHIL S4140
+
+SA22                 7157                 5PR HD 22" TEST LEAD                   2 EA
+                                          PHIL SA22
+
+SA44                 7155                 5EA HD 22" TEST LEAD                   2 EA
+                                          PHIL SA44
+
+
+PO'S: 5                                                                                                               END OF REPORT

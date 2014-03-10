@@ -1,0 +1,12 @@
+DATE: 03/04/14                                              ABLETRONICS                                              POR210 PAGE: 1
+USER: KEN T31                                        RECEIVING DOCUMENT PRINT                                        TIME: 10:20 AM
+
+       VENDOR-ITEM # ITEM                 DESCRIPTION                        UNITS UM    LOC SPECIAL RECEIVING INFORMATION
+===================================================================================================================================
+PO#: 023272  Whse: 01  Promised: 02/28/14  Vendor:       UNIV UNIVERSAL ENTERPRISES, INC.
+
+UET105               26882                24VAC 40VA 120/208/240VAC OPEN        18 EA
+                                          UNIV UET105
+
+
+PO'S: 1                                                                                                               END OF REPORT

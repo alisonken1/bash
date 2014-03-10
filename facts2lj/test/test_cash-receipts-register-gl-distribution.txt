@@ -1,0 +1,8 @@
+
+DATE: 12/04/13                                              ABLETRONICS                                              ARR210 PAGE: 1
+USER: CP  T41                              CASH RECEIPTS REGISTER GL DISTRIBUTION #0857                              TIME:  8:52 AM
+
+GL PERIOD 12/13 DEC
+
+G/L#    DESCRIPTION                   CUSTOMER NAME                           CHECK DOCUMENT        DEBIT       CREDIT          NET
+===================================================================================================================================

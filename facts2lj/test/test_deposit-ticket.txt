@@ -1,0 +1,27 @@
+
+DATE: 11/05/13          ABLETRONICS           ARR213 PAGE: 1
+USER: CP  T41          DEPOSIT TICKET         TIME:  3:27 PM
+
+                       DEPOSIT # 0850
+
+BATCH #91
+BANK 01 BANK OF AMERICA
+ACCOUNT #      0056914689
+
+ CHECK NAME                                           AMOUNT
+============================================================
+143743 AMERICAN SECURITY PRODUCTS                     240.00
+ 21212 AQUEOUS TECHNOLOGIES                            15.44
+034472 METAL COATERS OF CALIFORNIA                      9.72
+570892 CDM CONSTRUCTORS INC.                           20.52
+850510 CHAFFEY HIGH SCHOOL DIST.                       38.85
+852912 CHAFFEY HIGH SCHOOL DIST.                      184.99
+ 52346 MINDRUM PRECISION PRODUCTS                     149.04
+ 35977 MULTISOURCE                                     58.97
+036886 OMEGA EXTRUDING CORP.                           37.58
+143029 PNEUDRAULICS, INC.                              20.89
+ 61046 PROGRESSIVE FASTENING SYSTEMS                  103.51
+                                                ------------
+CHECKS: 11                        DEPOSIT TOTAL       879.51
+
+BATCHES: 1                             END OF DEPOSIT TICKET
