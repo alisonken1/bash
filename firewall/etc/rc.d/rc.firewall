@@ -76,14 +76,14 @@ fw_restart() {
 fw_show() {
     echo "/etc/rc.d/rc.firewall:  Showing rules ${1}" | $LOGGER
     f="disabled"
-    if [ -f /proc/sys/net/ipv4/ip_forward) ] ; then
+    if [ -f /proc/sys/net/ipv4/ip_forward ] ; then
         if [ $(cat /proc/sys/net/ipv4/ip_forward) -eq 1 ]; then
             f="enabled"
         fi
     fi
     echo "IPV4 packet forwarding ${f}"
     f="disabled"
-    if [ -f /proc/sys/net/ipv6/all/forwarding) ] ; then
+    if [ -f /proc/sys/net/ipv6/all/forwarding ] ; then
         if [ $(cat /proc/sys/net/ipv6/all/forwarding) -eq 1 ]; then
             f="enabled"
         fi
