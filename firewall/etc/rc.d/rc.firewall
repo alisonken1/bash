@@ -27,6 +27,7 @@
 
 # Local variables used
 IPTABLES="/usr/sbin/iptables"
+IPFORWARD="/etc/rc.d/rc.ip_forward"
 
 ###########
 # LOGGING #
@@ -45,20 +46,50 @@ fi
 # Functions #
 #############
 
+ipforward() {
+    if [ -e ${IPFORWARD} ] ; then
+        # In case packet forwarding script is non-executable, run it as part
+        # of this script to ensure it starts/stops packet forwarding
+        . ${IPFORWARD} $1
+    fi
+}
+
 fw_start() {
     echo "/etc/rc.d/rc.firewall:  Starting firewall ${1}" | $LOGGER
+    # Last step enable packet forwarding between IF_LOCAL and IF_INET
+    ipforward start
 }
 
 fw_stop() {
     echo "/etc/rc.d/rc.firewall:  Stopping firewall ${1}" | $LOGGER
+    # Stop packet forwarding
+    ipforward stop
 }
 
 fw_restart() {
     echo "/etc/rc.d/rc.firewall:  Re-starting firewall ${1}" | $LOGGER
+    fw_stop
+    sleep 1
+    fw_start
 }
 
 fw_show() {
     echo "/etc/rc.d/rc.firewall:  Showing rules ${1}" | $LOGGER
+    f="disabled"
+    if [ -f /proc/sys/net/ipv4/ip_forward) ] ; then
+        if [ $(cat /proc/sys/net/ipv4/ip_forward) -eq 1 ]; then
+            f="enabled"
+        fi
+    fi
+    echo "IPV4 packet forwarding ${f}"
+    f="disabled"
+    if [ -f /proc/sys/net/ipv6/all/forwarding) ] ; then
+        if [ $(cat /proc/sys/net/ipv6/all/forwarding) -eq 1 ]; then
+            f="enabled"
+        fi
+    fi
+    echo "IPV6 packet forwarding ${f}"
+
     ${IPTABLES} -L
 }
 
