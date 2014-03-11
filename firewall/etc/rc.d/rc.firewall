@@ -1,0 +1,84 @@
+#!/bin/sh
+#
+# /etc/rc.d/rc.firewall
+#
+# Starts/stops iptables rules
+# Written for Slackware v14.1
+#
+# Modify /etc/rc.d/rc.inet1 to call this script during start/stop
+#
+# IANA IPV4 Private network assignments
+# 10.0.0.0/8        (255.0.0.0)     Private Class A network (1 network)
+# 100.64.0.0/10     (255.192.0.0)   Carrier internal addresses
+# 169.254.0.0/16    (255.255.0.0)   Link-local addresses (Zero Config)
+# 172.16.0.0/12     (255.240.0.0)   Private Class B networks (16 networks)
+# 192.168.0.0/16    (255.255.0.0)   Private Class C networks (256 networks)
+#
+# IANA IPV6 private network space
+# fc00::/7      Private
+# FE80::/10     Link-local addresses (Zero config)
+#
+# ${IF_LOCAL}      Local interface
+# ${IF_INET}       Public interface
+#
+
+# Get the configuration information from /etc/rc.d/rc.inet1.conf:
+. /etc/rc.d/rc.inet1.conf
+
+###########
+# LOGGING #
+###########
+
+# If possible, log events in /var/log/messages:
+if [ -f /var/run/syslogd.pid -a -x /usr/bin/logger ]; then
+    # Set to /bin/cat for now while debugging
+    # LOGGER=/usr/bin/logger
+    LOGGER=/bin/cat
+else # output to stdout/stderr:
+    LOGGER=/bin/cat
+fi
+
+#############
+# Functions #
+#############
+
+fw_start() {
+    echo "/etc/rc.d/rc.firewall:  Starting firewall ${1}" | $LOGGER
+}
+
+fw_stop() {
+    echo "/etc/rc.d/rc.firewall:  Stopping firewall ${1}" | $LOGGER
+}
+
+fw_restart() {
+    echo "/etc/rc.d/rc.firewall:  Re-starting firewall ${1}" | $LOGGER
+}
+
+fw_show() {
+    echo "/etc/rc.d/rc.firewall:  Showing rules ${1}" | $LOGGER
+}
+
+case ${1} in
+start)
+    fw_start ${2}
+    ;;
+stop)
+    fw_stop ${2}
+    ;;
+restart)
+    fw_stop ${2}
+    fw_start ${2}
+    ;;
+show)
+    fw_show
+    ;;
+*)
+    echo
+    echo "rc.firewall command [interface]"
+    echo
+    echo "  command: start, stop, restart, show"
+    echo
+    echo "  (optional) [interface] to run firwall on"
+    echo
+    ;;
+esac
