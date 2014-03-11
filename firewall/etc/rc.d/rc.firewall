@@ -31,7 +31,17 @@ fi
 . /etc/rc.d/rc.inet1.conf
 
 # Local variables used
+# IPv4 programs
 IPTABLES="/usr/sbin/iptables"
+IPTSAVE="/usr/sbin/iptables-save"
+IPTRESTORE="/usr/sbin/iptables-restore"
+IPTFILE="/etc/iptables.save"
+# IPv6 programs
+IP6TABLES="/usr/sbin/ip6tables"
+IP6SAVE="/usr/sbin/ip6tables-save"
+IP6RESTORE="/usr/sbin/ip6tables-restore"
+IP6FILE="/etc/ip6tables.save"
+# Slackware scripts
 IPFORWARD="/etc/rc.d/rc.ip_forward"
 
 ###########
@@ -59,37 +69,46 @@ ipforward() {
     fi
 }
 
+fw_build() {
+    echo "/etc/rc.d/rc.firewall:  Building rules" | $LOGGER
+}
+
 fw_start() {
-    echo "/etc/rc.d/rc.firewall:  Starting firewall ${1}" | $LOGGER
+    echo "/etc/rc.d/rc.firewall:  Starting firewall" | $LOGGER
     # Last step enable packet forwarding between IF_LOCAL and IF_INET
+    if [ -e ${IPTFILE} ] ; then
+        echo "/etc/rc.d/rc.firewall:  Reloading rules" | $LOGGER
+        ${IPTRESTORE} <${IPTFILE}
+    else
+        fw_build
+    fi
     ipforward start
 }
 
 fw_stop() {
-    echo "/etc/rc.d/rc.firewall:  Stopping firewall ${1}" | $LOGGER
+    echo "/etc/rc.d/rc.firewall:  Stopping firewall" | $LOGGER
     # Stop packet forwarding
     ipforward stop
 }
 
 fw_restart() {
-    echo "/etc/rc.d/rc.firewall:  Re-starting firewall ${1}" | $LOGGER
+    echo "/etc/rc.d/rc.firewall:  Re-starting firewall" | $LOGGER
     fw_stop
     sleep 1
     fw_start
 }
 
 fw_show() {
-    echo "/etc/rc.d/rc.firewall:  Showing rules ${1}" | $LOGGER
+    echo "/etc/rc.d/rc.firewall:  Showing rules" | $LOGGER
     f="disabled"
     if [ -f /proc/sys/net/ipv4/ip_forward ] ; then
         if [ $(cat /proc/sys/net/ipv4/ip_forward) -eq 1 ]; then
             f="enabled"
         fi
     fi
-    echo "IPV4 packet forwarding ${f}"
+    echo "IPV4 packet forwarding"
     f="disabled"
-    if [ -f /proc/sys/net/ipv6/all/forwarding
-     ] ; then
+    if [ -f /proc/sys/net/ipv6/all/forwarding ] ; then
         if [ $(cat /proc/sys/net/ipv6/all/forwarding) -eq 1 ]; then
             f="enabled"
         fi
@@ -99,27 +118,53 @@ fw_show() {
     ${IPTABLES} -L
 }
 
+fw_rules() {
+    if [ -f ${IPTFILE} ] ; then
+        echo "IPv4 rules:"
+        cat ${IPTFILE}
+        echo
+    fi
+    fi [ -f ${IP6FILE} ] ; then
+        echo "IPv6 rules:"
+        cat ${IP6FILE}
+        echo
+    fi
+}
+
 case ${1} in
-start)
-    fw_start ${2}
-    ;;
-stop)
-    fw_stop ${2}
-    ;;
-restart)
-    fw_stop ${2}
-    fw_start ${2}
-    ;;
-status)
-    fw_show
-    ;;
-*)
-    echo
-    echo "rc.firewall command [interface]"
-    echo
-    echo "  command: start, stop, restart, show"
-    echo
-    echo "  (optional) [interface] to run firwall on"
-    echo
-    ;;
+    start)
+        fw_start
+        ;;
+    stop)
+        fw_stop
+        ;;
+    restart)
+        fw_stop
+        sleep 1
+        fw_start
+        ;;
+    rebuild)
+        fw_stop
+        sleep 1
+        fw_build
+        ;;
+    status)
+        fw_show
+        ;;
+    rules)
+
+    *)
+        echo
+        echo "rc.firewall command"
+        echo
+        echo "  command: start, stop, restart, rebuild, status, rules"
+        echo
+        echo "  start:      Install firewall rules"
+        echo "  stop:       Flush rules and open firewall"
+        echo "  restart:    Restart firewall rules"
+        echo "  rebuild:    Flush rules and rebuild tables"
+        echo "  status:     Show firewall rules currently in effect"
+        echo "  rules:      Show saved rules"
+        echo
+        ;;
 esac
