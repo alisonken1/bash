@@ -25,6 +25,9 @@
 # Get the configuration information from /etc/rc.d/rc.inet1.conf:
 . /etc/rc.d/rc.inet1.conf
 
+# Local variables used
+IPTABLES="/usr/sbin/iptables"
+
 ###########
 # LOGGING #
 ###########
@@ -56,6 +59,7 @@ fw_restart() {
 
 fw_show() {
     echo "/etc/rc.d/rc.firewall:  Showing rules ${1}" | $LOGGER
+    ${IPTABLES} -L
 }
 
 case ${1} in
