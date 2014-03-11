@@ -14,10 +14,6 @@
 # 172.16.0.0/12     (255.240.0.0)   Private Class B networks (16 networks)
 # 192.168.0.0/16    (255.255.0.0)   Private Class C networks (256 networks)
 #
-# IANA IPV6 private network space
-# fc00::/7      Private
-# FE80::/10     Link-local addresses (Zero config)
-#
 # ${IF_LOCAL}      Local interface
 # ${IF_INET}       Public interface
 #
@@ -36,13 +32,6 @@ IPTABLES="/usr/sbin/iptables"
 IPTSAVE="/usr/sbin/iptables-save"
 IPTRESTORE="/usr/sbin/iptables-restore"
 IPTFILE="/etc/iptables.save"
-# IPv6 programs
-IP6TABLES="/usr/sbin/ip6tables"
-IP6SAVE="/usr/sbin/ip6tables-save"
-IP6RESTORE="/usr/sbin/ip6tables-restore"
-IP6FILE="/etc/ip6tables.save"
-# Slackware scripts
-IPFORWARD="/etc/rc.d/rc.ip_forward"
 
 ###########
 # LOGGING #
@@ -61,34 +50,70 @@ fi
 # Functions #
 #############
 
-ipforward() {
-    if [ -e ${IPFORWARD} ] ; then
-        # In case packet forwarding script is non-executable, run it as part
-        # of this script to ensure it starts/stops packet forwarding
-        . ${IPFORWARD} $1
+ip_forward_start() {
+  if [ -f /proc/sys/net/ipv4/ip_forward ]; then
+    echo "Activating IPv4 packet forwarding."
+    echo 1 > /proc/sys/net/ipv4/ip_forward
+    # Changing /proc/sys/net/ipv4/ip_forward results in resetting all
+    # non-default ipv4 parameters for the interface as mentioned in
+    # /usr/src/linux/Documentation/networking/ip-sysctl.txt.  So, we
+    # will reapply any ipv4 sysctl parameters now:
+    if [ -r /etc/sysctl.conf ]; then
+      /bin/grep ipv4 /etc/sysctl.conf | sysctl -p - 1> /dev/null 2> /dev/null
     fi
+  fi
+  # When using IPv4 packet forwarding, you will also get the
+  # rp_filter, which automatically rejects incoming packets if the
+  # routing table entry for their source address doesn't match the
+  # network interface they're arriving on.  This has security
+  # advantages because it prevents the so-called IP spoofing,
+  # however it can pose problems if you use asymmetric routing
+  # (packets from you to a host take a different path than packets
+  # from that host to you) or if you operate a non-routing host
+  # which has several IP addresses on different interfaces.  To
+  # turn rp_filter off, uncomment the lines below:
+  #if [ -r /proc/sys/net/ipv4/conf/all/rp_filter ]; then
+  #  echo "Disabling rp_filter."
+  #  echo 0 > /proc/sys/net/ipv4/conf/all/rp_filter
+  #fi
+}
+
+ip_forward_stop() {
+  if [ -f /proc/sys/net/ipv4/ip_forward ]; then
+    echo "Disabling IPv4 packet forwarding."
+    echo 0 > /proc/sys/net/ipv4/ip_forward
+    # Changing /proc/sys/net/ipv4/ip_forward results in resetting all
+    # non-default ipv4 parameters for the interface as mentioned in
+    # /usr/src/linux/Documentation/networking/ip-sysctl.txt.  So, we
+    # will reapply any ipv4 sysctl parameters now:
+    if [ -r /etc/sysctl.conf ]; then
+      /bin/grep ipv4 /etc/sysctl.conf | sysctl -p - 1> /dev/null 2> /dev/null
+    fi
+  fi
 }
 
 fw_build() {
-    echo "/etc/rc.d/rc.firewall:  Building rules" | $LOGGER
+    echo "/etc/rc.d/rc.firewall:  Building IPv4 rules" | $LOGGER
+    # Save the rules
+    ${IPTSAVE} >${IPTFILE}
 }
 
 fw_start() {
     echo "/etc/rc.d/rc.firewall:  Starting firewall" | $LOGGER
     # Last step enable packet forwarding between IF_LOCAL and IF_INET
     if [ -e ${IPTFILE} ] ; then
-        echo "/etc/rc.d/rc.firewall:  Reloading rules" | $LOGGER
+        echo "/etc/rc.d/rc.firewall:  Reloading IPv4 rules" | $LOGGER
         ${IPTRESTORE} <${IPTFILE}
     else
         fw_build
     fi
-    ipforward start
+    ip_forward_start
 }
 
 fw_stop() {
     echo "/etc/rc.d/rc.firewall:  Stopping firewall" | $LOGGER
     # Stop packet forwarding
-    ipforward stop
+    ip_forward_stop
 }
 
 fw_restart() {
@@ -108,13 +133,6 @@ fw_show() {
     fi
     echo "IPV4 packet forwarding"
     f="disabled"
-    if [ -f /proc/sys/net/ipv6/all/forwarding ] ; then
-        if [ $(cat /proc/sys/net/ipv6/all/forwarding) -eq 1 ]; then
-            f="enabled"
-        fi
-    fi
-    echo "IPV6 packet forwarding ${f}"
-
     ${IPTABLES} -L
 }
 
@@ -122,11 +140,6 @@ fw_rules() {
     if [ -f ${IPTFILE} ] ; then
         echo "IPv4 rules:"
         cat ${IPTFILE}
-        echo
-    fi
-    fi [ -f ${IP6FILE} ] ; then
-        echo "IPv6 rules:"
-        cat ${IP6FILE}
         echo
     fi
 }
@@ -146,25 +159,32 @@ case ${1} in
     rebuild)
         fw_stop
         sleep 1
-        fw_build
+        fw_build4
+        fw_build6
         ;;
     status)
         fw_show
         ;;
     rules)
-
+        if [ -e ${IPTFILE} ] ; then
+            echo 'Saved IPv4 rules:'
+            cat ${IPTFILE}
+        else
+            echo "No saved rules"
+        fi
+        ;;
     *)
         echo
         echo "rc.firewall command"
         echo
-        echo "  command: start, stop, restart, rebuild, status, rules"
+        echo "  command:"
         echo
-        echo "  start:      Install firewall rules"
-        echo "  stop:       Flush rules and open firewall"
-        echo "  restart:    Restart firewall rules"
-        echo "  rebuild:    Flush rules and rebuild tables"
-        echo "  status:     Show firewall rules currently in effect"
-        echo "  rules:      Show saved rules"
+        echo "      start:      Install firewall rules"
+        echo "      stop:       Flush rules and open firewall"
+        echo "      restart:    Restart firewall rules"
+        echo "      rebuild:    Flush rules and rebuild tables"
+        echo "      status:     Show firewall rules currently in effect"
+        echo "      rules:      Show saved rules"
         echo
         ;;
 esac

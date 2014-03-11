@@ -1,0 +1,172 @@
+#!/bin/sh
+#
+# /etc/rc.d/rc.firewall6
+#
+# Starts/stops ip6tables rules
+# Written for Slackware v14.1
+#
+# Modify /etc/rc.d/rc.inet1 to call this script during start/stop
+#
+# IANA IPV6 private network space
+# fc00::/7      Private
+# FE80::/10     Link-local addresses (Zero config)
+#
+# ${IF_LOCAL}      Local interface
+# ${IF_INET}       Public interface
+#
+
+if [ ${UID} -ne 0 ] ; then
+    echo "Script must be run as root"
+    exit 1
+fi
+
+# Get the configuration information from /etc/rc.d/rc.inet1.conf:
+. /etc/rc.d/rc.inet1.conf
+
+# Local variables used
+# IPv6 programs
+IP6TABLES="/usr/sbin/ip6tables"
+IP6SAVE="/usr/sbin/ip6tables-save"
+IP6RESTORE="/usr/sbin/ip6tables-restore"
+IP6FILE="/etc/ip6tables.save"
+
+###########
+# LOGGING #
+###########
+
+# If possible, log events in /var/log/messages:
+if [ -f /var/run/syslogd.pid -a -x /usr/bin/logger ]; then
+    # Set to /bin/cat for now while debugging
+    # LOGGER=/usr/bin/logger
+    LOGGER=/bin/cat
+else # output to stdout/stderr:
+    LOGGER=/bin/cat
+fi
+
+#############
+# Functions #
+#############
+
+ip6_forward_start() {
+  if [ -f /proc/sys/net/ipv6/conf/all/forwarding ]; then
+    echo "Activating IPv6 packet forwarding."
+    echo 1 > /proc/sys/net/ipv6/conf/all/forwarding
+    # Changing /proc/sys/net/ipv6/conf/all/forwarding results in resetting
+    # all non-default ipv6 parameters for the interface as mentioned in
+    # /usr/src/linux/Documentation/networking/ip-sysctl.txt.  So, we
+    # will reapply any ipv6 sysctl parameters now:
+    if [ -r /etc/sysctl.conf ]; then
+      /bin/grep ipv6 /etc/sysctl.conf | sysctl -p - 1> /dev/null 2> /dev/null
+    fi
+  fi
+}
+
+ip6_forward_stop() {
+  if [ -f /proc/sys/net/ipv6/conf/all/forwarding ]; then
+    echo "Disabling IPv6 packet forwarding."
+    echo 0 > /proc/sys/net/ipv6/conf/all/forwarding
+    # Changing /proc/sys/net/ipv6/conf/all/forwarding results in resetting
+    # all non-default ipv6 parameters for the interface as mentioned in
+    # /usr/src/linux/Documentation/networking/ip-sysctl.txt.  So, we
+    # will reapply any ipv6 sysctl parameters now:
+    if [ -r /etc/sysctl.conf ]; then
+      /bin/grep ipv6 /etc/sysctl.conf | sysctl -p - 1> /dev/null 2> /dev/null
+    fi
+  fi
+}
+
+fw6_build() {
+    echo "/etc/rc.d/rc.firewall6:  Building IPv6 rules" | $LOGGER
+    # Save the rules
+    ${IP6TSAVE} >${IP6TFILE}
+}
+
+fw6_start() {
+    echo "/etc/rc.d/rc.firewall6:  Starting firewall" | $LOGGER
+    # Last step enable packet forwarding between IF_LOCAL and IF_INET
+    if [ -e ${IPT6FILE} ] ; then
+        echo "/etc/rc.d/rc.firewall6:  Reloading IPv6 rules" | $LOGGER
+        ${IPT6RESTORE} <${IPT6FILE}
+    else
+        fw6_build
+    fi
+    ip6_forward_start
+}
+
+fw6_stop() {
+    echo "/etc/rc.d/rc.firewall6:  Stopping firewall" | $LOGGER
+    # Stop packet forwarding
+    ip6_forward_stop
+}
+
+fw6_restart() {
+    echo "/etc/rc.d/rc.firewall6:  Re-starting firewall" | $LOGGER
+    fw6_stop
+    sleep 1
+    fw6_start
+}
+
+fw6_show() {
+    echo "/etc/rc.d/rc.firewall:  Showing rules" | $LOGGER
+    f="disabled"
+    if [ -f /proc/sys/net/ipv6/all/forwarding ] ; then
+        if [ $(cat /proc/sys/net/ipv6/all/forwarding) -eq 1 ]; then
+            f="enabled"
+        fi
+    fi
+    echo "IPV6 packet forwarding ${f}"
+    ${IPT6ABLES} -L
+}
+
+fw6_rules() {
+    fi [ -f ${IP6FILE} ] ; then
+        echo "IPv6 rules:"
+        cat ${IP6FILE}
+        echo
+    fi
+}
+
+case ${1} in
+    start)
+        fw6_start
+        ;;
+    stop)
+        fw6_stop
+        ;;
+    restart)
+        fw6_stop
+        sleep 1
+        fw6_start
+        ;;
+    rebuild)
+        fw6_stop
+        sleep 1
+        fw6_build
+        ;;
+    status)
+        fw6_show
+        ;;
+    rules)
+        if [ -e ${IP6TFILE} ] ; then
+            echo 'Saved IPv6 rules:'
+            cat ${IPT6FILE}
+        else
+            echo "No saved rules"
+        fi
+        ;;
+
+    *)
+        echo
+        echo "rc.firewall6 command"
+        echo
+        echo "  command:"
+        echo
+        echo "      start:      Install firewall rules"
+        echo "      stop:       Flush rules and open firewall"
+        echo "      restart:    Restart firewall rules"
+        echo "      rebuild:    Flush rules and rebuild tables"
+        echo "      status:     Show firewall rules currently in effect"
+        echo "      rules:      Show saved rules"
+        echo
+        ;;
+esac
