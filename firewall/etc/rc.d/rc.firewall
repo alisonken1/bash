@@ -22,6 +22,11 @@
 # ${IF_INET}       Public interface
 #
 
+if [ ${UID} -ne 0 ] ; then
+    echo "Script must be run as root"
+    exit 1
+fi
+
 # Get the configuration information from /etc/rc.d/rc.inet1.conf:
 . /etc/rc.d/rc.inet1.conf
 
